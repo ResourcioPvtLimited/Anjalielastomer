@@ -2,19 +2,19 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="h-[500px] flex flex-col overflow-hidden ">
+    <section className="h-[500px] flex flex-col overflow-hidden font-raleway font-bold">
       {/* Hero Content */}
       <div className="  overflow-hidden h-[500px] relative w-full">
 
-        <div className=" h-full flex flex-col justify-center p-4 ml-14 w-full">
-          <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900">
+        <div className=" h-full flex flex-col justify-center p-4 ml-10 w-full">
+          <h1 className="font-raleway text-5xl sm:text-6xl text-gray-900">
             Engineered{" "}
             <span className="text-orange-500">for</span>{" "}
             <br />
-            <span className="text-5xl sm:text-6xl font-extrabold text-orange-500 block">
+            <span className="text-5xl sm:text-6xl text-orange-500 block">
               the Future of
             </span>{" "}
-            <span className="text-6xl sm:text-6xl font-extrabold text-orange-500 block">
+            <span className="text-6xl sm:text-6xl text-orange-500 block">
               Rail-
               <span className="text-gray-900">Roads</span>
             </span>
