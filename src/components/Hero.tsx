@@ -2,11 +2,10 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="h-[500px] flex flex-col overflow-hidden font-raleway font-bold">
+    <section className="w-full flex items-center font-raleway font-bold min-h-screen">
       {/* Hero Content */}
-      <div className="  overflow-hidden h-[500px] relative w-full">
-
-        <div className=" h-full flex flex-col justify-center p-4 ml-10 w-full">
+  
+        <div className=" h-full flex flex-col justify-center p-4 ml-10 w-[50%]">
           <h1 className="font-raleway text-5xl sm:text-6xl text-gray-900">
             Engineered{" "}
             <span className="text-orange-500">for</span>{" "}
@@ -44,9 +43,9 @@ const Hero: React.FC = () => {
         <img
           src="/train.png"
           alt="Modern train"
-          className="z-10 absolute  -right-48 top-8 w-4/6 object-contain"
+          className="w-[50%] -mr-96"
         />
-      </div>
+      
 
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="bg-white max-w-7xl mx-auto px-6 py-12 md:py-20">
+    <div className="bg-white w-full mx-auto px-6 py-12 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16 items-start">
         {/* Images Section */}
         <div className="md:col-span-2 space-y-10">
