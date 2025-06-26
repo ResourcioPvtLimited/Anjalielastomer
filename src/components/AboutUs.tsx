@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
+    <div className="bg-white max-w-7xl mx-auto px-6 py-12 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16 items-start">
         {/* Images Section */}
         <div className="md:col-span-2 space-y-10">
@@ -21,7 +21,7 @@ const AboutUs: React.FC = () => {
         {/* Text Content Section */}
         <div className="md:col-span-3 flex flex-col justify-start space-y-8">
           <div>
-            <h2 className="text-3xl font-semibold text-slate-900 max-w-max">
+            <h2 className="text-3xl font-semibold text-slate-900 max-w-max font-ralewaysss">
               About <span className="text-orange-600">Us</span>
             </h2>
             <p className="mt-4 text-xl text-slate-800 max-w-xl">
@@ -35,7 +35,7 @@ const AboutUs: React.FC = () => {
               <h3 className="font-semibold text-slate-900 mb-2">
                 Our <span className="text-orange-600">Story</span>
               </h3>
-              <p className="text-sm leading-relaxed text-slate-700 ">
+              <p className="text-sm leading-relaxed text-slate-700 font-montserrat">
                 Over the previous 15 years, Anjali Elastomers, which was founded in 2009, has developed from a maker of rail components to a top supplier of entire railway infrastructure.
               </p>
             </div>
