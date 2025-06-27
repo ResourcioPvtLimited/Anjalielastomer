@@ -1,1 +1,25 @@
 @import "tailwindcss";
+:root {
+  --textblue: #193055; 
+  --textorange:#FB7602;
+  --bgcolour:#FFF5EF;
+}
+
+.text-textorange {
+  color: var(--textorange);
+}
+.text-textblue{
+    color: var(--textblue);
+}
+.bg-textorange{
+    background-color: var(--textorange);
+}
+.bg-bgcolour{
+    background-color: var(--bgcolour);
+}
+.font-monte {
+  font-family: var(--font-montserrat), sans-serif;
+}
+.font-raleway {
+  font-family: var(--font-raleway), sans-serif;
+}

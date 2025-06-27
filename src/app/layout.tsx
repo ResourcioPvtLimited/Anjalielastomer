@@ -1,27 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Raleway, Montserrat } from "next/font/google";
+import { Raleway, Montserrat } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 
 const raleway = Raleway({
   variable: "--font-raleway",
-  weight: ["800"], // or add more weights like ["400", "600", "800"]
+  weight: ["800", "500", "300"],
   subsets: ["latin"],
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
-  weight: ["400", "500", "600", "700", "800"], // Choose what you use
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -37,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${montserrat.variable}`}
-      >
+      <body className={`${raleway.variable} ${montserrat.variable}`}>
         {children}
       </body>
     </html>
