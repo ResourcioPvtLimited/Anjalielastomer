@@ -4,22 +4,22 @@ import React from "react";
 const Hero: React.FC = () => {
   return (
     <section className="w-full flex font-raleway font-bold min-h-fit overflow-x-hidden mb-20 pl-5">
-      {/* Hero Content */}
-      <div className="h-full flex flex-col justify-center p-4 w-[50%] ml-5 mt-20">
-        <h1 className="font-raleway text-5xl sm:text-6xl text-textblue ">
+      {/* Hero TextContent */}
+      <div className="h-full flex flex-col justify-center p-4 w-[80%] ml-5 mt-20">
+        <h1 className="font-raleway text-7xl text-textblue w-full">
           Engineered{" "}
-          <span className="text-textorange ">for</span>{" "}
+          <span className="text-textorange">for</span>{" "}
           <br />
-          <span className="text-5xl sm:text-6xl text-textorange block my-7">
+          <span className="text-7xl text-textorange block my-7">
             the Future of
           </span>{" "}
-          <span className="text-6xl sm:text-6xl text-textorange block">
+          <span className="text-7xl  text-textorange block">
             Rail-
             <span className="text-textblue">Roads</span>
           </span>
         </h1>
 
-        <div className="mt-10 flex items-center space-x-6">
+        <div className="mt-10 flex items-center space-x-6 w-full">
           <button className="bg-textorange text-white px-7 py-3 rounded-2xl text-lg font-light transition-colors">
             Explore Products
           </button>
@@ -29,13 +29,13 @@ const Hero: React.FC = () => {
           </button>
         </div>
       </div>
-
-      <div className="w-[50%] flex items-end justify-end ">
+      {/* Hero ImageContent */}
+      <div className="w-[80%] flex items-end justify-end">
         <Image
           src="/train.png"
           alt="Modern train"
-          className="max-w-full h-[700px] object-contain"
-          width={600}
+          className="w-full h-[700px] object-contain"
+          width={1800}
           height={700}
         />
       </div>
