@@ -47,6 +47,24 @@ const products: Product[] = [
     rating: 5,
     reviewCount: 193,
   },
+  {
+    id: 5,
+    name: 'Bolts & Nuts 2',
+    description:
+      'A fastener is used for joining, holding or assembling of a single or multiple components.',
+    image: '/featuredproductsimg3.png',
+    rating: 3,
+    reviewCount: 43,
+  },
+  {
+    id: 6,
+    name: 'Axile Brake Disc 2',
+    description:
+      'The brake pad or shoe with the friction lining is pushed against the rotating drill.',
+    image: '/featuredproductsimg2.png',
+    rating: 4,
+    reviewCount: 174,
+  },
 ];
 
 // Helper: Generate star rating icons with SVG
@@ -102,17 +120,17 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
 
 const FeaturedProducts: React.FC = () => {
   return (
-    <section className="bg-[#FFF6F0] py-12 px-6 sm:px-10 md:px-16 lg:px-24">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 max-w-6xl mx-auto">
+    <section className="bg-[#FFF6F0] py-12 px-4 sm:px-6 md:px-8">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 max-w-full mx-auto">
         <span>Featured </span>
         <span className="text-orange-500">Products</span>
       </h2>
 
-      <div className="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="flex overflow-x-auto gap-6 py-2 scrollbar-thin scrollbar-thumb-gray-400">
         {products.map(({ id, name, image, rating, reviewCount, description }) => (
           <article
             key={id}
-            className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
+            className="bg-white w-96 sm:w-80 rounded-lg shadow-sm overflow-hidden flex-shrink-0 flex flex-col"
           >
             <div className="flex justify-center h-80 md:h-60 flex-col items-center relative">
               <img
@@ -146,7 +164,7 @@ const FeaturedProducts: React.FC = () => {
 
               <button
                 type="button"
-                className="mt-auto rounded border border-orange-500 px-4 py-2 font-semibold text-orange-600 hover:bg-orange-50 active:bg-orange-100 transition-colors duration-200"
+                className="mt-auto rounded border border-orange-500 px-4 py-2 font-semibold text-orange-600  active:bg-orange-100 transition-colors duration-600 hover:bg-orange-500 hover:text-white"
                 aria-label={`Explore product ${name}`}
                 onClick={() => alert(`Exploring product: ${name}`)}
               >
@@ -157,7 +175,7 @@ const FeaturedProducts: React.FC = () => {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto mt-12 text-center">
+      <div className="max-w-full mx-auto mt-12 text-center">
         <button
           type="button"
           className="inline-flex items-center text-orange-500 font-semibold text-lg hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 rounded"
