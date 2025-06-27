@@ -126,54 +126,71 @@ const FeaturedProducts: React.FC = () => {
         <span className="text-orange-500">Products</span>
       </h2>
 
-      <div className="flex overflow-x-auto gap-6 py-2 scrollbar-thin scrollbar-thumb-gray-400">
-        {products.map(({ id, name, image, rating, reviewCount, description }) => (
-          <article
-            key={id}
-            className="bg-white w-96 sm:w-80 rounded-lg shadow-sm overflow-hidden flex-shrink-0 flex flex-col"
-          >
-            <div className="flex justify-center h-80 md:h-60 flex-col items-center relative">
-              <img
-                src={image}
-                alt={name}
-                width={400}
-                height={240}
-                className="object-cover h-full"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2fb66f7d-2863-4865-9b97-9f067ba7b13e.png';
-                }}
-              />
 
-              <h3 className="absolute bottom-1 left-6 font-semibold z-10 text-white px-2 py-1  rounded-sm w-full text-left">
-                {name}
-              </h3>
-            </div>
+      <div className="relative overflow-hidden w-full">
+        <div
+          className="flex gap-6 py-2 w-max"
+          style={{
+            animation: 'scroll-bounce 6s linear infinite alternate',
+          }}
+        >
+          {products.map(({ id, name, image, rating, reviewCount, description }) => (
+            <article
+              key={id}
+              className="bg-white w-96 sm:w-80 rounded-lg shadow-sm overflow-hidden flex-shrink-0 flex flex-col"
+            >
+              <div className="flex justify-center h-80 md:h-60 flex-col items-center relative">
+                <img
+                  src={image}
+                  alt={name}
+                  width={400}
+                  height={240}
+                  className="object-cover h-full"
 
-            <div className="p-4 flex flex-col flex-grow">
-
-
-              <div className="flex items-center space-x-1 mb-2">
-                <StarRating rating={rating} />
-                <span className="text-gray-600 text-sm">({reviewCount})</span>
+                />
+                <h3 className="absolute bottom-1 left-6 font-semibold z-10 text-white px-2 py-1 rounded-sm w-full text-left">
+                  {name}
+                </h3>
               </div>
 
-              <p className="text-gray-700 flex-grow text-sm leading-relaxed mb-5">
-                {description}
-              </p>
+              <div className="p-4 flex flex-col flex-grow">
+                <div className="flex items-center space-x-1 mb-2">
+                  <StarRating rating={rating} />
+                  <span className="text-gray-600 text-sm">({reviewCount})</span>
+                </div>
 
-              <button
-                type="button"
-                className="mt-auto rounded border border-orange-500 px-4 py-2 font-semibold text-orange-600  active:bg-orange-100 transition-colors duration-600 hover:bg-orange-500 hover:text-white"
-                aria-label={`Explore product ${name}`}
-                onClick={() => alert(`Exploring product: ${name}`)}
-              >
-                Explore Product
-              </button>
-            </div>
-          </article>
-        ))}
+                <p className="text-gray-700 flex-grow text-sm leading-relaxed mb-5">
+                  {description}
+                </p>
+
+                <button
+                  type="button"
+                  className="mt-auto rounded border border-orange-500 px-4 py-2 font-semibold text-orange-600 active:bg-orange-100 transition-colors duration-600 hover:bg-orange-500 hover:text-white"
+                  aria-label={`Explore product ${name}`}
+                  onClick={() => alert(`Exploring product: ${name}`)}
+                >
+                  Explore Product
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* 👇 CSS for back and forth animation */}
+        <style jsx>{`
+    @keyframes scroll-bounce {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(calc(-100% + 100vw));
+      }
+    }
+  `}</style>
       </div>
+
+
+
 
       <div className="max-w-full mx-auto mt-12 text-center">
         <button
