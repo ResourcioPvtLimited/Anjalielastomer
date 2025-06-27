@@ -50,7 +50,7 @@ const AboutUs: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className='flex w-full gap-7 my-10 font-monte'>
+        <div className='flex w-full gap-7 mt-10 mb-7 font-monte'>
           <div className='w-[50%]'>
             <h1 className="text-lg font-bold text-textblue mb-6 flex gap-3 font-monte">
               Manufacturing  <span className='text-textorange'>Excellence</span>
@@ -68,6 +68,10 @@ const AboutUs: React.FC = () => {
             </p>
           </div>
         </div>
+        <button className="text-textblue transition-colors pr-7 py-3 text-3xl font-light flex items-center gap-2 font-raleway">
+                      <span className="text-textorange">Learn</span><span className="text-textblue"> more</span>
+                      <Image src='/arrow.svg' alt='arrow' width={27} height={27}/>
+                    </button>
       </div>
     </div>
   );
