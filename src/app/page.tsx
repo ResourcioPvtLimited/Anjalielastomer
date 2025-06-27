@@ -6,7 +6,7 @@ import FeaturedProducts from "@/components/FeaturedProducts";
 
 const App: React.FC = () => {
   return (
-    <main className="bg-orange-100/70 max-w-screen">
+    <main className="bg-bgcolour max-w-screen">
       <Navbar />
       <Hero />
       <AboutUs />
