@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         <img
           src="/train.png"
           alt="Modern train"
-          className="w-[50%] -mr-96 h-full"
+          className="w-[50%] h-[500px] mt-10"
         />
       
 

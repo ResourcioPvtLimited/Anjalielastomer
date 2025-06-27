@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const AboutUs: React.FC = () => {
   return (
-    <div className="w-full flex justify-between gap-20 h-screen bg-white px-5 py-10 font-Raleway">
+    <div className="w-full flex justify-between gap-20 h-screen bg-white px-5 py-10 font-raleway -mt-20 z-40 relative">
       <div className="w-[30%] max-w-xs md:max-w-sm lg:max-w-md ml-10 flex flex-col h-full">
         <div className="flex-1 rounded-xl overflow-hidden">
           <Image
